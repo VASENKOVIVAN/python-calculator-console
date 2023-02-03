@@ -11,7 +11,6 @@ def choise_x():
     while True:
         x = str(input('\nВведите 1-ое число: '))
         try:
-            float(x)
             return float(x)
         except:
             get_error(ERROR_NUMBER)
