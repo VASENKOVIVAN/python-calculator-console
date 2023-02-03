@@ -1,3 +1,5 @@
+import time
+
 # Ошибки
 ERROR_NULL_DIVISION = 'На ноль делить нельзя'
 ERROR_NUMBER = 'Это не число'
@@ -143,9 +145,34 @@ def get_error(error):
     print('+--------+' + '-' * (LEN_TITLE * 2 + (len(TITLE))-9) + '+')
 
 
+# Закрытие программы
+
+def exit():
+
+    expression = ' Программа закроется через 5 секунд'
+    print('\n' + '+' + '-' * (LEN_TITLE * 2 + (len(TITLE))) + '+')
+
+    print('|' + expression + ' ' *
+          ((LEN_TITLE * 2)-len(str(expression))+12) + '|')
+
+    print('+' + '-' * (LEN_TITLE * 2 + (len(TITLE))) + '+')
+    print('|', end='', flush=True)
+    for i in range(5, -1, -1):
+        print(' ', end='', flush=True)
+        print(i, end='', flush=True)
+        print(' ', end='', flush=True)
+        if not i == 0:
+            for i in range(0, 8):
+                print('=', end='', flush=True)
+                time.sleep(1/9)
+    print('|', end='', flush=True)
+    print('\n' + '+' + '-' * (LEN_TITLE * 2 + (len(TITLE))) + '+')
+    time.sleep(2)
+
+
 # Заголовок и длина строки заголовка
-TITLE = 'КАЛЬКУЛЯТОР'
-LEN_TITLE = 20
+TITLE = 'КАЛЬКУЛЯТОР '
+LEN_TITLE = 23
 
 # Вывод главного заголовка
 print('\n' + '+' + '-' * (LEN_TITLE * 2 + (len(TITLE))) + '+')
@@ -174,4 +201,5 @@ while True:
     # Проверка на повторный запуск
     again = check_repeat()
     if not again:
+        exit()
         break
