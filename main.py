@@ -103,7 +103,14 @@ def check_result(result):
 
 
 def get_result(num):
+    first_num = check_result(x)
+    second_num = check_result(y)
+    expression = str(first_num) + ' ' + str(operation) + ' ' + str(second_num)
     print('\n' + '+-----------+' + '-' *
+          (LEN_TITLE * 2 + (len(TITLE))-12) + '+')
+    print('| Выражение | ' + str(expression) + ' ' *
+          ((LEN_TITLE * 2)-len(str(expression))-2) + '|')
+    print('+-----------+' + '-' *
           (LEN_TITLE * 2 + (len(TITLE))-12) + '+')
     print('| Результат | ' + str(num) + ' ' *
           ((LEN_TITLE * 2)-len(str(num))-2) + '|')
