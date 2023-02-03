@@ -1,7 +1,7 @@
 # Ошибки
 ERROR_NULL_DIVISION = 'На ноль делить нельзя'
 ERROR_NUMBER = 'Это не число'
-ERROR_OPERATION = 'Ошибка, нет такой операции'
+ERROR_OPERATION = 'Нет такой операции'
 ERROR_REPEAT = "Напишита 'Да' или 'Нет'"
 
 # Выбор 1-го числа
