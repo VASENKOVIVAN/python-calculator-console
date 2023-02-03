@@ -8,6 +8,7 @@ ERROR_REPEAT = "Напишита 'Да' или 'Нет'"
 
 
 def choise_x():
+    """Выбор первого числа"""
     while True:
         x = str(input('\nВведите 1-ое число: '))
         try:
@@ -19,8 +20,8 @@ def choise_x():
 
 
 def choise_operation():
+    """Выбор операции"""
     while True:
-
         operation = str(input('\nВыберите операцию (+, -, *, /): '))
 
         if operation != '+' and operation != '-' and operation != '*' and operation != '/':
@@ -32,6 +33,7 @@ def choise_operation():
 
 
 def choise_y():
+    """Выбор второго числа"""
     while True:
         y = str(input('\nВведите 2-ое число: '))
         try:
@@ -45,6 +47,14 @@ def choise_y():
 
 
 def operation_addition(x, y):
+    '''
+    Возвращает произведение двух чисел. После проверки в функции check_result.
+        Параметры:
+            x (float): первое десятичное число
+            y (float): второе десятичное число
+        Возвращаемое значение:
+            check_result(result) (int | float): преобразованное в int, если десятичная часть равна нулю
+    '''
     result = x + y
     get_result(check_result(result))
 
@@ -52,6 +62,14 @@ def operation_addition(x, y):
 
 
 def operation_subtraction(x, y):
+    '''
+    Возвращает разницу двух чисел. После проверки в функции check_result.
+        Параметры:
+            x (float): первое десятичное число
+            y (float): второе десятичное число
+        Возвращаемое значение:
+            check_result(result) (int | float): преобразованное в int, если десятичная часть равна нулю
+    '''
     result = x - y
     get_result(check_result(result))
 
@@ -79,7 +97,7 @@ def check_result(result):
     if result - int(result) == 0:
         return int(result)
     else:
-        return result
+        return float(result)
 
 # Вывод результата
 
